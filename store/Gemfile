@@ -37,24 +37,18 @@ gem  "less-rails"
 
 gem 'twitter-bootstrap-rails'
 
+group :development do
+  gem 'binding_of_caller'
 
+  gem "better_errors"
 
-
-
-
-
+  gem "ffaker"
+end
 
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
-gem 'binding_of_caller'
-
-gem "better_errors"
-
-gem "ffaker"
-
-
 end
 
 # Use ActiveModel has_secure_password
