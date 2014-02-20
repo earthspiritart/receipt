@@ -1,12 +1,21 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+ before_action :find_product
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    # ternary operator
+    @categories = @products ? @product.categories : Category.all
   end
 
+private
+
+def find_product
+  if params[:product_id].present?
+   @product = Product.find(params[:product_id])
+  end
+end
+end
   # GET /categories/1
   # GET /categories/1.json
   def show

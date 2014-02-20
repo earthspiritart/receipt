@@ -1,10 +1,12 @@
 Store::Application.routes.draw do
-  resources :categories
+
 
   resources :customers
 
-  resources :products
-
+  resources :products do
+      resources :categories
+    end
+   resources :categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

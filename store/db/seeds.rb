@@ -17,12 +17,12 @@ def set_up_development_database
   200.times do |i|
     products = Product.create(
 {
-    name:        Faker::BaconIpsum.words.join(" "),
-    description: Faker::BaconIpsum.paragraph,
-    company:    Faker::Company.name,
-    upc:         Faker::Identification.drivers_license,
-    price: rand(5..278),
-    website:    Faker::Internet.http_url,
+    name:         Faker::BaconIpsum.words.join(" "),
+    description:  Faker::BaconIpsum.paragraph,
+    company:      Faker::Company.name,
+    upc:          Faker::Identification.drivers_license,
+    price:        rand(5..278),
+    website:      Faker::Internet.http_url,
       }
       )
   end
